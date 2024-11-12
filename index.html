@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello World</title>
+  <link href='/style.css' rel='stylesheet'>
+</head>
+<body>
+ 
+  <h1> keliling segitiga </h1>
+  <div class="tengah">
+ 
+
+<div class="card">
+<div class="cardbody">
+
+
+
+<form>
+  <label>nilai tinggi </label>
+  <input type="text" id="PJ">
+  <label> nilai alas </label>
+  <input type="text" id="LB">
+  <label>nilai luas </label>
+  <input type="text" id="LB">
+
+</form>
+
+  <button class="btn1" onclick="Hitung()">hitung</button>
+
+  <div id="hasil" class="hsl"></div>
+</div>
+</div>
+</div>
+<script>
+  function Hitung() {                                          
+  var pj = document.getElementById("PJ").value
+  var lb = document.getElementById("LB").value
+  var luas = pj*lb
+  var res = "hitung luas persegi <br>nilai panjang"+pj+",dan lebarnya "+lb+",menjadi:<br>luas = panjang X lebar<br> luas = "+pj+" x "+lb+"<br>luas = "+luas 
+  var pjlb = parseFloat(pj) + parseFloat(lb)
+  var kll = 2*pjlb
+  res += "<br>keliling persegi<br>keliling = 2x (panjang+lebar)"
+  res += "<br>keliling = 2x (" +pj+ "+" +lb+")"
+  res +="<br>keliling = 2x "+pjlb
+  res +="<br>keliling = "+kll
+
+  document.getElementById("hasil").innerHTML=res
+  //console.log(res)
+  } 
+</script>
+
+</body>
+</html>
